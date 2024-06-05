@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:rainhadobel/Controllers/product_controller.dart';
 import 'package:rainhadobel/Views/Pages/homepage.dart';
 
 void main(){
@@ -10,9 +12,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: HomePage(),
+    return MultiProvider(
+      providers : [
+        ChangeNotifierProvider(create: (context) => ProductController()),
+      ],
+      child: const MaterialApp(
+        title: 'Rainha do Bel',
+        debugShowCheckedModeBanner: false,
+        home: HomePage(),
+      ),
     );
   }
 }
