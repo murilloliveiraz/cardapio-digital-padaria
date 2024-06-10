@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:rainhadobel/Controllers/product_controller.dart';
+import 'package:rainhadobel/Controllers/user_controller.dart';
 import 'package:rainhadobel/Views/Pages/homepage.dart';
 
 void main(){
@@ -14,6 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers : [
+        ChangeNotifierProvider(create: (context) => UserController()),
         ChangeNotifierProvider(create: (context) => ProductController()),
       ],
       child: const MaterialApp(
