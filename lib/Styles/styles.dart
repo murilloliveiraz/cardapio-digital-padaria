@@ -13,6 +13,14 @@ TextStyle SansMedium(double size){
   return GoogleFonts.dmSans(
     fontSize: size,
     fontWeight: FontWeight.w600,
+    color: Color(0xFFFFFFFF)
+  );
+}
+
+TextStyle SansMediumYellow(double size){
+  return GoogleFonts.dmSans(
+    fontSize: size,
+    fontWeight: FontWeight.w600,
     color: Color(0xFFFCAF3C)
   );
 }
