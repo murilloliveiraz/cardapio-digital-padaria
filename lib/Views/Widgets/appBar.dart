@@ -29,7 +29,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                   Row(
                     children: [
                       const Icon(Icons.location_on_outlined, color: Color(0xFFFCAF3C)),
-                      Text("Presidente Altino, Osasco", style: SansNormal(18))
+                      Text("Presidente Altino, Osasco", style: SansNormal(16))
                     ],
                   )
                 ],
